@@ -1,0 +1,71 @@
+transaction_id,date,account_id,account_type,merchant,category,amount,balance,currency,is_fraud
+TXN-001,2024-01-01 08:15:00,ACC-1001,Checking,Walmart,Groceries,125.50,5420.30,USD,0
+TXN-002,2024-01-01 12:30:00,ACC-1001,Checking,Shell Gas,Transportation,45.00,5375.30,USD,0
+TXN-003,2024-01-01 18:45:00,ACC-1001,Checking,Amazon,Shopping,89.99,5285.31,USD,0
+TXN-004,2024-01-02 09:20:00,ACC-1001,Checking,Starbucks,Food & Dining,12.75,5272.56,USD,0
+TXN-005,2024-01-02 14:10:00,ACC-1001,Checking,Netflix,Entertainment,15.99,5256.57,USD,0
+TXN-006,2024-01-03 10:05:00,ACC-1001,Checking,Target,Shopping,67.80,5188.77,USD,0
+TXN-007,2024-01-03 16:30:00,ACC-1001,Checking,Uber,Transportation,22.50,5166.27,USD,0
+TXN-008,2024-01-04 11:45:00,ACC-1001,Checking,Whole Foods,Groceries,156.30,5009.97,USD,0
+TXN-009,2024-01-04 19:20:00,ACC-1001,Checking,Spotify,Entertainment,9.99,4999.98,USD,0
+TXN-010,2024-01-05 08:30:00,ACC-1001,Checking,McDonald's,Food & Dining,18.40,4981.58,USD,0
+TXN-011,2024-01-05 13:15:00,ACC-1001,Checking,Best Buy,Electronics,299.99,4681.59,USD,0
+TXN-012,2024-01-06 09:00:00,ACC-1001,Checking,CVS Pharmacy,Healthcare,34.99,4646.60,USD,0
+TXN-013,2024-01-06 15:45:00,ACC-1001,Checking,Chipotle,Food & Dining,24.50,4622.10,USD,0
+TXN-014,2024-01-07 10:30:00,ACC-1001,Checking,Home Depot,Home Improvement,89.95,4532.15,USD,0
+TXN-015,2024-01-07 17:00:00,ACC-1001,Checking,Apple Store,Electronics,1299.00,3233.15,USD,0
+TXN-016,2024-01-08 08:45:00,ACC-1001,Checking,Dunkin',Food & Dining,8.75,3224.40,USD,0
+TXN-017,2024-01-08 14:20:00,ACC-1001,Checking,Costco,Groceries,234.60,2989.80,USD,0
+TXN-018,2024-01-09 11:10:00,ACC-1001,Checking,Target,Shopping,45.99,2943.81,USD,0
+TXN-019,2024-01-09 18:30:00,ACC-1001,Checking,Lyft,Transportation,15.00,2928.81,USD,0
+TXN-020,2024-01-10 09:40:00,ACC-1001,Checking,Walgreens,Healthcare,28.50,2900.31,USD,0
+TXN-021,2024-01-10 16:00:00,ACC-1001,Checking,Unknown Merchant,Luxury Goods,15000.00,-12099.69,USD,1
+TXN-022,2024-01-11 10:20:00,ACC-1001,Checking,Starbucks,Food & Dining,11.50,-12111.19,USD,0
+TXN-023,2024-01-11 14:50:00,ACC-1001,Checking,Amazon,Shopping,54.99,-12166.18,USD,0
+TXN-024,2024-01-12 09:30:00,ACC-1001,Checking,Shell Gas,Transportation,52.00,-12218.18,USD,0
+TXN-025,2024-01-12 15:45:00,ACC-1001,Checking,Netflix,Entertainment,15.99,-12234.17,USD,0
+TXN-026,2024-01-13 11:00:00,ACC-1001,Checking,Walmart,Groceries,98.75,-12332.92,USD,0
+TXN-027,2024-01-13 17:30:00,ACC-1001,Checking,Uber,Transportation,35.00,-12367.92,USD,0
+TXN-028,2024-01-14 10:15:00,ACC-1001,Checking,Whole Foods,Groceries,187.20,-12555.12,USD,0
+TXN-029,2024-01-14 19:00:00,ACC-1001,Checking,Spotify,Entertainment,9.99,-12565.11,USD,0
+TXN-030,2024-01-15 08:20:00,ACC-1001,Checking,McDonald's,Food & Dining,16.80,-12581.91,USD,0
+TXN-031,2024-01-15 13:30:00,ACC-1002,Savings,Salary Deposit,Income,5000.00,15000.00,USD,0
+TXN-032,2024-01-16 10:45:00,ACC-1002,Savings,Transfer to Checking,Transfer,-3000.00,12000.00,USD,0
+TXN-033,2024-01-16 11:00:00,ACC-1001,Checking,Transfer from Savings,Transfer,3000.00,-9581.91,USD,0
+TXN-034,2024-01-17 09:15:00,ACC-1001,Checking,Best Buy,Electronics,199.99,-9781.90,USD,0
+TXN-035,2024-01-17 16:45:00,ACC-1001,Checking,Target,Shopping,78.50,-9860.40,USD,0
+TXN-036,2024-01-18 10:30:00,ACC-1001,Checking,Home Depot,Home Improvement,156.75,-10017.15,USD,0
+TXN-037,2024-01-18 17:20:00,ACC-1001,Checking,Apple Store,Electronics,25000.00,-35017.15,USD,1
+TXN-038,2024-01-19 09:00:00,ACC-1001,Checking,CVS Pharmacy,Healthcare,42.30,-35059.45,USD,0
+TXN-039,2024-01-19 15:10:00,ACC-1001,Checking,Chipotle,Food & Dining,26.75,-35086.20,USD,0
+TXN-040,2024-01-20 11:45:00,ACC-1001,Checking,Dunkin',Food & Dining,9.50,-35095.70,USD,0
+TXN-041,2024-01-20 16:30:00,ACC-1001,Checking,Costco,Groceries,198.40,-35294.10,USD,0
+TXN-042,2024-01-21 10:20:00,ACC-1001,Checking,Walgreens,Healthcare,31.25,-35325.35,USD,0
+TXN-043,2024-01-21 17:00:00,ACC-1001,Checking,Unknown Merchant,Cryptocurrency,50000.00,-85325.35,USD,1
+TXN-044,2024-01-22 09:30:00,ACC-1001,Checking,Starbucks,Food & Dining,13.25,-85338.60,USD,0
+TXN-045,2024-01-22 14:45:00,ACC-1001,Checking,Amazon,Shopping,67.99,-85406.59,USD,0
+TXN-046,2024-01-23 11:15:00,ACC-1001,Checking,Shell Gas,Transportation,48.50,-85455.09,USD,0
+TXN-047,2024-01-23 18:20:00,ACC-1001,Checking,Netflix,Entertainment,15.99,-85471.08,USD,0
+TXN-048,2024-01-24 09:45:00,ACC-1001,Checking,Walmart,Groceries,112.30,-85583.38,USD,0
+TXN-049,2024-01-24 16:00:00,ACC-1001,Checking,Uber,Transportation,28.75,-85612.13,USD,0
+TXN-050,2024-01-25 10:30:00,ACC-1001,Checking,Whole Foods,Groceries,145.60,-85757.73,USD,0
+TXN-051,2024-01-25 17:15:00,ACC-1001,Checking,Spotify,Entertainment,9.99,-85767.72,USD,0
+TXN-052,2024-01-26 08:10:00,ACC-1001,Checking,McDonald's,Food & Dining,19.80,-85787.52,USD,0
+TXN-053,2024-01-26 13:40:00,ACC-1001,Checking,Best Buy,Electronics,89.99,-85877.51,USD,0
+TXN-054,2024-01-27 10:00:00,ACC-1001,Checking,Target,Shopping,123.45,-86000.96,USD,0
+TXN-055,2024-01-27 15:30:00,ACC-1001,Checking,Home Depot,Home Improvement,234.50,-86235.46,USD,0
+TXN-056,2024-01-28 11:20:00,ACC-1001,Checking,Apple Store,Electronics,35000.00,-121235.46,USD,1
+TXN-057,2024-01-28 17:45:00,ACC-1001,Checking,CVS Pharmacy,Healthcare,38.75,-121274.21,USD,0
+TXN-058,2024-01-29 10:30:00,ACC-1001,Checking,Chipotle,Food & Dining,28.90,-121303.11,USD,0
+TXN-059,2024-01-29 16:00:00,ACC-1001,Checking,Dunkin',Food & Dining,10.25,-121313.36,USD,0
+TXN-060,2024-01-30 09:00:00,ACC-1001,Checking,Costco,Groceries,267.80,-121581.16,USD,0
+TXN-061,2024-01-30 14:30:00,ACC-1001,Checking,Walgreens,Healthcare,45.60,-121626.76,USD,0
+TXN-062,2024-01-31 11:00:00,ACC-1001,Checking,Unknown Merchant,Wire Transfer,100000.00,-221626.76,USD,1
+TXN-063,2024-02-01 09:15:00,ACC-1001,Checking,Starbucks,Food & Dining,11.75,-221638.51,USD,0
+TXN-064,2024-02-01 15:20:00,ACC-1001,Checking,Amazon,Shopping,45.99,-221684.50,USD,0
+TXN-065,2024-02-02 10:45:00,ACC-1001,Checking,Shell Gas,Transportation,55.00,-221739.50,USD,0
+TXN-066,2024-02-02 17:00:00,ACC-1001,Checking,Netflix,Entertainment,15.99,-221755.49,USD,0
+TXN-067,2024-02-03 11:30:00,ACC-1001,Checking,Walmart,Groceries,89.50,-221844.99,USD,0
+TXN-068,2024-02-03 16:45:00,ACC-1001,Checking,Uber,Transportation,32.00,-221876.99,USD,0
+TXN-069,2024-02-04 10:15:00,ACC-1001,Checking,Whole Foods,Groceries,178.90,-222055.89,USD,0
+TXN-070,2024-02-04 18:00:00,ACC-1001,Checking,Spotify,Entertainment,9.99,-222065.88,USD,0

@@ -1,0 +1,41 @@
+employee_id,first_name,last_name,email,department,position,hire_date,salary,bonus_percent,performance_score,age,gender,location
+EMP-001,Michael,Johnson,mjohnson@company.com,Engineering,Senior Software Engineer,2020-03-15,125000,0.15,4.5,32,Male,San Francisco
+EMP-002,Sarah,Williams,swilliams@company.com,Marketing,Marketing Manager,2019-07-22,95000,0.12,4.2,29,Female,New York
+EMP-003,David,Brown,dbrown@company.com,Sales,Sales Representative,2021-01-10,65000,0.20,3.8,26,Male,Chicago
+EMP-004,Jennifer,Davis,jdavis@company.com,Engineering,DevOps Engineer,2020-11-05,110000,0.10,4.7,30,Female,Seattle
+EMP-005,Robert,Miller,rmiller@company.com,HR,HR Specialist,2018-09-12,72000,0.08,4.0,35,Male,Chicago
+EMP-006,Lisa,Wilson,lwilson@company.com,Finance,Financial Analyst,2021-05-18,80000,0.10,4.3,27,Female,New York
+EMP-007,James,Moore,jmoore@company.com,Engineering,Software Engineer,2022-02-28,95000,0.08,4.1,25,Male,San Francisco
+EMP-008,Mary,Taylor,mtaylor@company.com,Marketing,Content Strategist,2020-04-14,78000,0.10,4.4,28,Female,New York
+EMP-009,William,Anderson,wanderson@company.com,Sales,Sales Manager,2017-11-30,105000,0.18,4.6,40,Male,Chicago
+EMP-010,Patricia,Thomas,pthomas@company.com,Engineering,QA Engineer,2021-08-23,85000,0.08,3.9,29,Female,Seattle
+EMP-011,Christopher,Jackson,cjackson@company.com,Finance,Accountant,2019-03-08,70000,0.07,4.2,33,Male,New York
+EMP-012,Barbara,White,bwhite@company.com,HR,HR Manager,2016-12-01,92000,0.15,4.8,42,Female,Chicago
+EMP-013,Daniel,Harris,dharris@company.com,Engineering,Tech Lead,2018-06-18,140000,0.20,4.9,37,Male,San Francisco
+EMP-014,Nancy,Martin,nmartin@company.com,Marketing,SEO Specialist,2022-01-15,68000,0.08,3.7,24,Female,New York
+EMP-015,Matthew,Thompson,mthompson@company.com,Sales,Account Executive,2021-09-07,72000,0.22,4.0,27,Male,Chicago
+EMP-016,Elizabeth,Garcia,egarcia@company.com,Engineering,Frontend Developer,2022-03-21,92000,0.08,4.3,26,Female,Seattle
+EMP-017,Joseph,Martinez,jmartinez@company.com,Finance,Senior Accountant,2019-10-12,88000,0.10,4.1,31,Male,New York
+EMP-018,Susan,Robinson,srobinson@company.com,HR,Recruiter,2020-12-03,62000,0.07,3.9,28,Female,Chicago
+EMP-019,Thomas,Clark,tclark@company.com,Engineering,Backend Developer,2021-04-26,100000,0.10,4.4,29,Male,San Francisco
+EMP-020,Jessica,Rodriguez,jrodriguez@company.com,Marketing,Social Media Manager,2022-06-10,70000,0.08,3.8,25,Female,New York
+EMP-021,Charles,Lewis,clewis@company.com,Sales,Business Development,2020-08-14,85000,0.15,4.2,30,Male,Chicago
+EMP-022,Karen,Lee,klee@company.com,Engineering,Data Engineer,2019-02-17,115000,0.12,4.6,34,Female,Seattle
+EMP-023,Steven,Walker,swalker@company.com,Finance,FP&A Analyst,2021-07-19,78000,0.09,4.0,27,Male,New York
+EMP-024,Ashley,Hall,ahall@company.com,HR,Benefits Coordinator,2022-04-05,58000,0.06,3.6,24,Female,Chicago
+EMP-025,Kevin,Allen,kallen@company.com,Engineering,ML Engineer,2020-10-28,130000,0.15,4.8,31,Male,San Francisco
+EMP-026,Amanda,Young,ayoung@company.com,Marketing,Brand Manager,2018-05-20,98000,0.14,4.5,36,Female,New York
+EMP-027,Brian,King,bking@company.com,Sales,Regional Sales Director,2017-01-15,135000,0.25,4.7,43,Male,Chicago
+EMP-028,Deborah,Wright,dwright@company.com,Engineering,Principal Engineer,2016-08-09,165000,0.20,4.9,45,Female,Seattle
+EMP-029,Gary,Lopez,glopez@company.com,Finance,Controller,2015-03-22,120000,0.18,4.6,48,Male,New York
+EMP-030,Kimberly,Hill,khill@company.com,HR,Director of HR,2014-11-08,115000,0.15,4.7,50,Female,Chicago
+EMP-031,Edward,Scott,escott@company.com,Engineering,Engineering Manager,2017-06-12,145000,0.18,4.6,39,Male,San Francisco
+EMP-032,Michelle,Green,mgreen@company.com,Marketing,VP Marketing,2015-09-30,180000,0.25,4.8,47,Female,New York
+EMP-033,Adam,Adams,aadams@company.com,Sales,VP Sales,2016-04-25,175000,0.30,4.9,44,Male,Chicago
+EMP-034,Lisa,Baker,lbaker@company.com,Engineering,Architect,2015-12-18,155000,0.15,4.7,46,Female,Seattle
+EMP-035,Mark,Nelson,mnelson@company.com,Finance,CFO,2013-07-11,250000,0.40,5.0,52,Male,New York
+EMP-036,Laura,Carter,lcarter@company.com,HR,CHRO,2012-02-14,220000,0.35,4.9,54,Female,Chicago
+EMP-037,Paul,Mitchell,pmitchell@company.com,Engineering,CTO,2011-05-03,280000,0.50,5.0,55,Male,San Francisco
+EMP-038,Nancy,Perez,nperez@company.com,Marketing,CMO,2013-10-20,260000,0.40,4.9,51,Female,New York
+EMP-039,Timothy,Roberts,troberts@company.com,Sales,CSO,2012-01-08,270000,0.45,5.0,53,Male,Chicago
+EMP-040,Heather,Turner,hturner@company.com,Engineering,VP Engineering,2014-08-16,210000,0.30,4.8,48,Female,Seattle
