@@ -45,7 +45,7 @@ class LLMService:
         # Use a Gemini Flash model for faster responses
         self.model = os.getenv(
             "LLM_MODEL",
-            "gemini-2.5-flash"
+            "gemini-3.6-flash"
         )
 
         self.temperature = float(
