@@ -1,55 +1,58 @@
-version: "3.8"
+# AI Data Analyst - Multi-stage Docker build
 
-services:
-  ai-data-analyst:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - "8000:8000"
-    env_file:
-      - .env
-    environment:
-      PYTHONPATH: /app
-    volumes:
-      - ./data:/app/data
-      - ./exports:/app/exports
-      - ./sample_data:/app/sample_data
-    restart: unless-stopped
-    healthcheck:
-      test:
-        [
-          "CMD",
-          "python",
-          "-c",
-          "import httpx; httpx.get('http://localhost:8000/health', timeout=5)"
-        ]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 10s
+# ==========================================
+# Stage 1: Build Frontend
+# ==========================================
+FROM node:20-alpine AS frontend-builder
 
-  ai-data-analyst-dev:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    ports:
-      - "8001:8000"
-      - "5173:5173"
-    env_file:
-      - .env
-    environment:
-      PYTHONPATH: /app
-    volumes:
-      - ./data:/app/data
-      - ./exports:/app/exports
-      - ./sample_data:/app/sample_data
-      - ./backend:/app/backend
-      - ./frontend:/app/frontend
-    command: >
-      sh -c "cd /app/frontend &&
-      npm run dev -- --host 0.0.0.0 --port 5173 &
-      uvicorn backend.main:app --host 0.0.0.0 --port 8000 --reload"
-    profiles:
-      - dev
-    restart: unless-stopped
+WORKDIR /app/frontend
+
+COPY frontend/package*.json ./
+
+RUN npm ci
+
+COPY frontend/ ./
+
+RUN npm run build
+
+
+# ==========================================
+# Stage 2: Python Backend
+# ==========================================
+FROM python:3.11-slim AS backend
+
+WORKDIR /app
+
+# System dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gcc \
+    g++ \
+    libpq-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+# Python dependencies
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Backend source
+COPY backend/ ./backend/
+
+# Built frontend
+COPY --from=frontend-builder /app/frontend/dist ./frontend/dist
+
+# Runtime directories
+RUN mkdir -p /app/data /app/exports /app/sample_data
+
+# Environment
+ENV PYTHONPATH=/app
+
+# Render provides PORT automatically
+EXPOSE 10000
+
+# Container health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=10s --retries=3 \
+    CMD python -c "import httpx, os; httpx.get(f'http://localhost:{os.getenv(\"PORT\", \"10000\")}/health', timeout=5)"
+
+# Start FastAPI
+CMD ["sh", "-c", "uvicorn backend.main:app --host 0.0.0.0 --port ${PORT:-10000}"]
