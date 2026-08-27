@@ -159,6 +159,15 @@ app.include_router(export.router, prefix="/api", tags=["export"])
 
 # Serve static files (exported files)
 app.mount("/exports", StaticFiles(directory="exports"), name="exports")
+# Serve React frontend
+frontend_dir = Path("/app/frontend/dist")
+
+if frontend_dir.exists():
+    app.mount(
+        "/",
+        StaticFiles(directory=frontend_dir, html=True),
+        name="frontend"
+    )
 
 
 if __name__ == "__main__":
