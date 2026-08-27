@@ -2,37 +2,72 @@
 
 > An AI-powered natural language data analysis platform that transforms CSV datasets into actionable insights using LLM-powered reasoning, SQL/Pandas analysis, interactive visualizations, anomaly detection, and data-quality intelligence.
 
-[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
-[![React](https://img.shields.io/badge/React-TypeScript-61DAFB?logo=react&logoColor=black)](https://react.dev/)
-[![DuckDB](https://img.shields.io/badge/DuckDB-Analytics-FFF000?logo=duckdb&logoColor=black)](https://duckdb.org/)
-[![Docker](https://img.shields.io/badge/Docker-Supported-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi&logoColor=white)
+![React](https://img.shields.io/badge/React-TypeScript-61DAFB?logo=react&logoColor=black)
+![DuckDB](https://img.shields.io/badge/DuckDB-Analytics-FFF000?logo=duckdb&logoColor=black)
+![Docker](https://img.shields.io/badge/Docker-Supported-2496ED?logo=docker&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-Frontend-646CFF?logo=vite&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
 
 ---
 
-## Overview
+## 🚀 Live Application
+
+### 🌐 Frontend
+
+**Live Application:**
+
+https://ai-data-analyst-1-oj15.onrender.com
+
+The frontend is deployed as a Render Static Site and communicates with the production FastAPI backend.
+
+### ⚙️ Backend API
+
+**Production Backend:**
+
+https://ai-data-analyst-pre1.onrender.com
+
+### ❤️ Health Check
+
+https://ai-data-analyst-pre1.onrender.com/health
+
+### 📚 Swagger API Documentation
+
+https://ai-data-analyst-pre1.onrender.com/docs
+
+### 📖 ReDoc API Documentation
+
+https://ai-data-analyst-pre1.onrender.com/redoc
+
+### 💻 GitHub Repository
+
+https://github.com/arunkumar-201/ai-data-analyst
+
+---
+
+# 📌 Overview
 
 **AI Data Analyst** is a full-stack AI application designed to allow users to analyze structured datasets using natural language.
 
 Instead of manually writing SQL, Python, or Pandas operations, users can upload CSV files and ask questions such as:
 
-- "Which region generated the highest revenue?"
-- "Show the monthly sales trend."
-- "What are the top five products?"
-- "Which customers are underperforming?"
-- "Generate SQL for this analysis."
-- "Detect anomalies in the dataset."
-- "Give me a summary of this dataset."
-- "What insights can you find from the data?"
+- Which region generated the highest revenue?
+- Show the monthly sales trend.
+- What are the top five products?
+- Which customers are underperforming?
+- Generate SQL for this analysis.
+- Detect anomalies in the dataset.
+- Give me a summary of this dataset.
+- What insights can you find from the data?
 
-The application combines an LLM-powered reasoning layer with deterministic data-analysis tools to produce useful, explainable results.
+The application combines an LLM-powered reasoning layer with deterministic data-analysis tools to produce useful and explainable results.
 
 ---
 
-## Key Features
+# ✨ Key Features
 
-### 1. CSV Upload & Dataset Management
+## 1. CSV Upload & Dataset Management
 
 - Upload CSV datasets through the web interface
 - Support for multiple datasets
@@ -43,11 +78,13 @@ The application combines an LLM-powered reasoning layer with deterministic data-
 - Dataset activation and management
 - Dataset search and organization
 
-### 2. Natural Language Data Analysis
+---
+
+## 2. Natural Language Data Analysis
 
 Users can interact with datasets using conversational questions.
 
-Example:
+### Example
 
 ```text
 Which region generated the highest revenue?
@@ -74,8 +111,7 @@ This allows the application to go beyond simple chatbot responses.
 
 The platform can generate SQL queries based on natural-language questions.
 
-Example:
-
+Example
 SELECT
     region,
     SUM(revenue) AS total_revenue
@@ -89,8 +125,7 @@ Generated queries can be displayed as part of the analysis trace.
 
 For operations better suited to Python/Pandas, the system can generate and execute Pandas-based analysis.
 
-Example:
-
+Example
 df.groupby("region")["revenue"].sum().sort_values(ascending=False)
 
 This provides flexibility for statistical and dataframe-oriented operations.
@@ -149,8 +184,7 @@ Dataset quality indicators
 
 The application maintains conversation context within a session.
 
-For example:
-
+Example
 User:
 What is the average revenue?
 
@@ -191,8 +225,7 @@ This makes the system easier to understand and debug compared with a black-box c
 
 Analysis results can be displayed in structured tables.
 
-Example:
-
+Example
 Region	Revenue
 South	950000
 West	820000
@@ -202,7 +235,7 @@ East	640000
 
 The application provides export capabilities for analytical results and reports.
 
-Supported export workflows include:
+Supported workflows include:
 
 JSON exports
 CSV exports
@@ -233,7 +266,7 @@ Total Data Size
 
 The dashboard provides a quick entry point into the analytical workspace.
 
-Architecture
+🏗️ Architecture
 
 The application follows a modular full-stack architecture.
 
@@ -242,69 +275,121 @@ The application follows a modular full-stack architecture.
                          └────────────┬────────────┘
                                       │
                                       ▼
-                    ┌───────────────────────────────┐
-                    │ React + TypeScript + Tailwind │
-                    │           Frontend            │
-                    └──────────────┬────────────────┘
-                                   │ HTTP/REST
-                                   ▼
-                    ┌───────────────────────────────┐
-                    │          FastAPI              │
-                    │        Backend API            │
-                    └──────────────┬────────────────┘
-                                   │
-                ┌──────────────────┼──────────────────┐
-                │                  │                  │
-                ▼                  ▼                  ▼
+                     ┌───────────────────────────────┐
+                     │ React + TypeScript + Tailwind │
+                     │           Frontend            │
+                     └──────────────┬────────────────┘
+                                    │ HTTP/REST
+                                    ▼
+                     ┌───────────────────────────────┐
+                     │           FastAPI             │
+                     │         Backend API           │
+                     └──────────────┬────────────────┘
+                                    │
+                 ┌──────────────────┼──────────────────┐
+                 │                  │                  │
+                 ▼                  ▼                  ▼
         ┌──────────────┐   ┌──────────────┐   ┌──────────────┐
         │ CSV Upload & │   │ Dataset      │   │ Conversation │
         │ Validation   │   │ Profiling    │   │ Memory       │
         └──────────────┘   └──────────────┘   └──────────────┘
-                │                  │
-                └──────────┬───────┘
-                           ▼
-                    ┌───────────────┐
-                    │    DuckDB     │
-                    │  Analytics DB │
-                    └───────┬───────┘
-                            │
+                 │                  │
+                 └──────────┬───────┘
                             ▼
-                 ┌──────────────────────┐
-                 │ AI Agent /           │
-                 │ Orchestration Layer  │
-                 └──────────┬───────────┘
-                            │
-                            ▼
-                    ┌───────────────┐
-                    │     LLM       │
-                    │ Gemini / LLM  │
-                    └───────┬───────┘
-                            │
-                            ▼
-                 ┌──────────────────────┐
-                 │ Analysis Tool Layer  │
-                 ├──────────────────────┤
-                 │ SQL Analysis         │
-                 │ Pandas Analysis      │
-                 │ Visualization        │
-                 │ Anomaly Detection    │
-                 │ Data Profiling       │
-                 │ Data Quality         │
-                 └──────────┬───────────┘
-                            │
-                            ▼
-                 ┌──────────────────────┐
-                 │ Results + Explanation│
-                 │ + Visualization      │
-                 └──────────────────────┘
-Architecture Diagram
+                     ┌───────────────┐
+                     │    DuckDB     │
+                     │  Analytics DB │
+                     └───────┬───────┘
+                             │
+                             ▼
+                  ┌──────────────────────┐
+                  │ AI Agent /           │
+                  │ Orchestration Layer  │
+                  └──────────┬───────────┘
+                             │
+                             ▼
+                     ┌───────────────┐
+                     │      LLM      │
+                     │ Gemini / LLM  │
+                     └───────┬───────┘
+                             │
+                             ▼
+                  ┌──────────────────────┐
+                  │ Analysis Tool Layer  │
+                  ├──────────────────────┤
+                  │ SQL Analysis         │
+                  │ Pandas Analysis      │
+                  │ Visualization        │
+                  │ Anomaly Detection    │
+                  │ Data Profiling       │
+                  │ Data Quality         │
+                  └──────────┬───────────┘
+                             │
+                             ▼
+                  ┌──────────────────────┐
+                  │ Results + Explanation│
+                  │ + Visualization      │
+                  └──────────────────────┘
+🧩 Architecture Components
+Frontend
 
-The repository also contains the architecture diagram used to document the system.
+The frontend provides the user interface for:
 
-Recommended location:
+Dataset upload
+Dataset management
+Natural-language chat
+Data quality analysis
+Anomaly detection
+Visualizations
+Reports
+History
+Settings
 
-docs/architecture.png
-Technology Stack
+Technology:
+
+React
+TypeScript
+Vite
+Tailwind CSS
+Axios
+Plotly
+Zustand
+Backend
+
+The backend provides:
+
+REST APIs
+Dataset management
+CSV processing
+DuckDB analytics
+LLM integration
+Agent orchestration
+SQL execution
+Pandas execution
+Chart generation
+Anomaly detection
+Data quality analysis
+Export functionality
+
+Technology:
+
+Python
+FastAPI
+Uvicorn
+Pandas
+DuckDB
+Pydantic
+AI Layer
+
+The AI layer provides:
+
+LLM-powered reasoning
+Tool selection
+Natural-language-to-SQL
+Natural-language-to-Pandas
+Analysis explanations
+Conversation context
+🛠️ Technology Stack
 Frontend
 React
 TypeScript
@@ -320,7 +405,8 @@ Uvicorn
 Pandas
 DuckDB
 Pydantic
-AI Layer
+AI
+Gemini / LLM
 LLM-powered agent
 Tool/function orchestration
 Natural-language-to-SQL
@@ -333,12 +419,13 @@ SQL
 Statistical analysis
 Anomaly detection
 Data profiling
+Data quality analysis
 DevOps
 Docker
 Docker Compose
 GitHub
-Render-compatible deployment
-Project Structure
+Render
+📁 Project Structure
 AI DATA ANALYST/
 │
 ├── backend/
@@ -425,7 +512,8 @@ AI DATA ANALYST/
 │   │       └── index.ts
 │   │
 │   ├── package.json
-│   └── vite.config.ts
+│   ├── vite.config.ts
+│   └── .env.production
 │
 ├── sample_data/
 │   ├── employee_data.csv
@@ -437,14 +525,13 @@ AI DATA ANALYST/
 ├── docs/
 │   └── architecture.png
 │
-├── backend/
 ├── Dockerfile
 ├── docker-compose.yml
 ├── requirements.txt
 ├── .env.example
 ├── .gitignore
 └── README.md
-Getting Started
+⚙️ Getting Started
 Prerequisites
 
 Make sure the following are installed:
@@ -454,13 +541,13 @@ Node.js 18+
 npm
 Git
 Docker (optional)
-Local Development
+💻 Local Development
 1. Clone the Repository
 git clone https://github.com/arunkumar-201/ai-data-analyst.git
 cd ai-data-analyst
 2. Backend Setup
 
-Create a Python virtual environment:
+Create a Python virtual environment.
 
 Windows
 python -m venv .venv
@@ -478,22 +565,16 @@ Create a .env file in the project root.
 
 Example:
 
-# LLM Configuration
-LLM_MODEL=your_model_name
-LLM_BASE_URL=your_llm_base_url
+GEMINI_API_KEY=your_gemini_api_key_here
+
+LLM_MODEL=gemini-2.5-flash
 LLM_TEMPERATURE=0.1
 LLM_MAX_TOKENS=4096
 LLM_REQUEST_TIMEOUT=60
 
-# API Key
-OPENAI_API_KEY=your_api_key_here
-
-# CORS
 CORS_ORIGINS=http://localhost:5173,http://localhost:3000
 
-Security: Never commit .env files or API keys to GitHub.
-
-If your configured LLM provider uses a different environment-variable name, update the configuration according to the implementation in backend/services/llm_service.py.
+Never commit API keys or .env files to GitHub.
 
 4. Start the Backend
 
@@ -508,6 +589,14 @@ http://localhost:8000
 Health check:
 
 http://localhost:8000/health
+
+Swagger:
+
+http://localhost:8000/docs
+
+ReDoc:
+
+http://localhost:8000/redoc
 5. Start the Frontend
 
 Open another terminal:
@@ -519,7 +608,25 @@ npm run dev
 Frontend:
 
 http://localhost:5173
-Docker Deployment
+🌍 Production Frontend Configuration
+
+The production frontend uses the deployed FastAPI backend.
+
+Create:
+
+frontend/.env.production
+
+Add:
+
+VITE_API_URL=https://ai-data-analyst-pre1.onrender.com
+
+The frontend API service uses the production backend URL for deployed requests.
+
+After changing the production environment configuration:
+
+cd frontend
+npm run build
+🐳 Docker Deployment
 
 The project includes Docker support for reproducible deployment.
 
@@ -538,48 +645,145 @@ docker compose down
 View logs:
 
 docker compose logs -f
-Docker Services
-Production Service
-ai-data-analyst
+☁️ Render Deployment
 
-Backend port:
+The application is deployed using Render.
 
-8000
-Development Service
-ai-data-analyst-dev
+The deployment consists of:
 
-Frontend:
+                         Internet
+                            │
+              ┌─────────────┴─────────────┐
+              │                           │
+              ▼                           ▼
+       Render Static Site           Render Web Service
+              │                           │
+              ▼                           ▼
+        React Frontend              FastAPI Backend
+              │                           │
+              └─────────────┬─────────────┘
+                            │
+                            ▼
+                         DuckDB
+                            │
+                            ▼
+                      Gemini / LLM
+Frontend Deployment
 
-5173
+The frontend is deployed as a Render Static Site.
 
-Backend:
+Production URL:
 
-8001
-API Overview
+https://ai-data-analyst-1-oj15.onrender.com
 
-The FastAPI backend exposes APIs for the main application workflows.
+Typical Render configuration:
 
-Typical API groups include:
+Root Directory:
+frontend
 
-/health
-/api/datasets
-/api/upload
-/api/chat
-/api/charts
-/api/anomalies
-/api/quality
-/api/export
+Build Command:
+npm install && npm run build
 
-The exact available routes can be inspected through FastAPI's generated documentation.
+Publish Directory:
+frontend/dist
 
-Swagger UI:
+Depending on the Render configuration, the root directory can be set to frontend, in which case:
 
-http://localhost:8000/docs
+Build Command:
+npm install && npm run build
+
+Publish Directory:
+dist
+
+Production environment variable:
+
+VITE_API_URL=https://ai-data-analyst-pre1.onrender.com
+Backend Deployment
+
+The backend is deployed as a Render Web Service.
+
+Production URL:
+
+https://ai-data-analyst-pre1.onrender.com
+
+Health endpoint:
+
+https://ai-data-analyst-pre1.onrender.com/health
+
+Swagger:
+
+https://ai-data-analyst-pre1.onrender.com/docs
 
 ReDoc:
 
+https://ai-data-analyst-pre1.onrender.com/redoc
+
+The backend runs on the Render-provided port.
+
+The application binds to:
+
+0.0.0.0
+
+and supports the Render PORT environment variable when configured by the deployment environment.
+
+🔌 API Overview
+
+The FastAPI backend exposes APIs for the main application workflows.
+
+Health
+GET /health
+Datasets
+GET    /api/datasets
+GET    /api/datasets/{id}
+GET    /api/datasets/{id}/profile
+GET    /api/datasets/{id}/quality
+GET    /api/datasets/{id}/preview
+GET    /api/datasets/{id}/schema
+DELETE /api/datasets/{id}
+GET    /api/schema
+Upload
+POST /api/upload
+POST /api/upload/preview
+Chat
+POST   /api/chat
+POST   /api/sessions
+GET    /api/sessions
+GET    /api/sessions/{id}
+GET    /api/sessions/{id}/history
+DELETE /api/sessions/{id}
+Charts
+POST /api/charts/generate
+POST /api/charts/auto
+GET  /api/charts/types
+Anomalies
+POST /api/anomalies/detect
+POST /api/anomalies/detect-multivariate
+GET  /api/anomalies/methods
+Quality
+GET /api/quality/{dataset_id}
+GET /api/quality/{dataset_id}/summary
+Export
+POST /api/export/data
+POST /api/export/chart
+POST /api/export/report
+GET  /api/export/formats
+📚 API Documentation
+
+Once the backend is running, FastAPI automatically provides API documentation.
+
+Local Swagger
+http://localhost:8000/docs
+Production Swagger
+
+https://ai-data-analyst-pre1.onrender.com/docs
+
+Local ReDoc
 http://localhost:8000/redoc
-Example Workflow
+Production ReDoc
+
+https://ai-data-analyst-pre1.onrender.com/redoc
+
+🔄 Example Workflow
 
 A typical user workflow looks like this:
 
@@ -604,7 +808,7 @@ A typical user workflow looks like this:
 10. Generate Explanation
        ↓
 11. Display Table / Chart / Insight
-Example Questions
+💬 Example Questions
 
 The following questions can be used to demonstrate the application.
 
@@ -624,7 +828,7 @@ Anomaly Detection
 Detect anomalies in the dataset and explain why they were flagged.
 Data Quality
 What are the major data quality issues in this dataset?
-Testing
+🧪 Testing
 
 The backend includes automated tests covering important application components.
 
@@ -650,7 +854,36 @@ do not break JSON serialization.
 
 These values are safely sanitized before being returned through the API.
 
-Error Handling
+🔍 Validation
+
+The application has been validated through backend and frontend checks.
+
+Current validation includes:
+
+Backend automated tests
+Frontend TypeScript diagnostics
+Frontend production build
+CSV upload smoke tests
+Dataset API smoke tests
+JSON serialization validation
+Health endpoint validation
+
+Example backend validation:
+
+85 passed
+
+Frontend production build:
+
+cd frontend
+npm run build
+
+Expected output:
+
+vite building for production...
+modules transformed
+dist/index.html
+dist/assets/...
+🛡️ Error Handling
 
 The application includes defensive handling for common failure scenarios including:
 
@@ -668,7 +901,7 @@ Backend API failures
 
 The frontend surfaces errors to the user rather than silently failing.
 
-Security Considerations
+🔐 Security Considerations
 
 The project follows basic security practices for an AI-enabled data application.
 
@@ -680,7 +913,7 @@ Never commit:
 
 .env
 
-to the repository.
+or API keys to the repository.
 
 Generated Code
 
@@ -690,52 +923,142 @@ Data Isolation
 
 Uploaded datasets are processed through the backend data layer and associated with application-level dataset/session state.
 
-Observability
+CORS
 
-The backend includes logging infrastructure for tracking application activity and failures.
+The backend supports configurable CORS origins through:
 
-Important events include:
+CORS_ORIGINS=http://localhost:5173
 
-Dataset uploads
-API requests
-Analysis execution
-Tool execution
-LLM interactions
-Errors
-Validation failures
+For production, configure the allowed frontend origin appropriately.
 
-This provides a foundation for production monitoring and debugging.
+📊 Data Processing
 
-Deployment
+The application uses DuckDB and Pandas for deterministic data processing.
 
-The application is containerized using Docker and can be deployed to container-compatible hosting platforms.
+The LLM is primarily responsible for:
 
-Deployment architecture:
+Natural Language
+      ↓
+Reasoning
+      ↓
+Tool Selection
+      ↓
+SQL / Pandas Plan
 
-                    Internet
-                       │
-                       ▼
-                ┌─────────────┐
-                │ Cloud Host  │
-                └──────┬──────┘
-                       │
-                       ▼
-                ┌─────────────┐
-                │   Docker    │
-                │  Container  │
-                └──────┬──────┘
-                       │
-             ┌─────────┴─────────┐
-             │                   │
-             ▼                   ▼
-        FastAPI API        Application Data
-             │
-             ▼
-          DuckDB
-             │
-             ▼
-          LLM API
-Sample Datasets
+The actual computation is handled by analytical tools.
+
+SQL Tool
+Pandas Tool
+Chart Tool
+Anomaly Tool
+Profiling Tool
+Quality Tool
+
+This approach reduces the risk of relying on the LLM to perform numerical calculations directly.
+
+🤖 AI Agent
+
+The AI agent acts as the orchestration layer.
+
+The general flow is:
+
+User Question
+      ↓
+Agent Router
+      ↓
+Understand Intent
+      ↓
+Select Tool
+      ↓
+Execute Tool
+      ↓
+Validate Result
+      ↓
+Generate Explanation
+      ↓
+Return Response
+
+Available tools include:
+
+SQL Tool
+Pandas Tool
+Chart Tool
+Anomaly Tool
+Profiling Tool
+Quality Tool
+🧠 Deterministic Analysis
+
+The system separates AI reasoning from deterministic computation.
+
+For example:
+
+User:
+Which region generated the highest revenue?
+
+The AI can determine that an aggregation is required.
+
+It can generate:
+
+SELECT
+    region,
+    SUM(revenue) AS total_revenue
+FROM sales
+GROUP BY region
+ORDER BY total_revenue DESC;
+
+DuckDB then executes the actual query.
+
+The result is returned to the AI layer for explanation.
+
+This architecture provides a better balance between:
+
+AI reasoning
+Data accuracy
+Explainability
+Reproducibility
+📈 Anomaly Detection
+
+The application supports multiple anomaly-detection approaches.
+
+Z-Score
+
+Useful for identifying values that are statistically far from the mean.
+
+IQR
+
+Uses the interquartile range to identify statistical outliers.
+
+Isolation Forest
+
+Useful for detecting anomalies using machine-learning-based isolation.
+
+🧹 Data Quality
+
+The quality analysis module evaluates datasets for issues such as:
+
+Missing Values
+      ↓
+Duplicate Records
+      ↓
+Data Types
+      ↓
+Column Statistics
+      ↓
+Potential Inconsistencies
+      ↓
+Quality Score
+📊 Dataset Profiling
+
+Dataset profiling provides information such as:
+
+Dataset dimensions
+Column names
+Data types
+Missing values
+Numerical statistics
+Categorical information
+Quality indicators
+📦 Sample Datasets
 
 Sample datasets are included in:
 
@@ -757,9 +1080,9 @@ Anomaly detection
 Data profiling
 Data quality analysis
 Visualization
-Screenshots
+🖼️ Screenshots
 
-Add application screenshots to:
+Application screenshots can be stored in:
 
 docs/screenshots/
 
@@ -771,29 +1094,17 @@ docs/screenshots/chat.png
 docs/screenshots/analysis.png
 docs/screenshots/anomalies.png
 docs/screenshots/data-quality.png
+Dashboard
 
-Then display them in this README.
+Natural Language Analysis
 
-Example:
+Dataset Management
 
-## Dashboard
+Anomaly Detection
 
-![Dashboard](docs/screenshots/dashboard.png)
+🎥 Demo
 
-## Natural Language Analysis
-
-![Chat Analysis](docs/screenshots/chat.png)
-
-## Dataset Management
-
-![Datasets](docs/screenshots/datasets.png)
-
-## Anomaly Detection
-
-![Anomalies](docs/screenshots/anomalies.png)
-Demo Video
-
-A short 10–30 second demonstration should showcase the core workflow:
+A short demonstration should showcase the core workflow:
 
 CSV Upload
     ↓
@@ -806,18 +1117,123 @@ AI Analysis
 Generated Result
     ↓
 Visualization / Anomaly Detection
+Live Demo
 
-Add the final demo video link here:
+https://ai-data-analyst-1-oj15.onrender.com
 
-## Demo
+🚀 Production Deployment
+Frontend
+Platform: Render Static Site
 
-[Watch the 30-second demo](YOUR_DEMO_LINK)
-Architecture Diagram
+URL:
+https://ai-data-analyst-1-oj15.onrender.com
+Backend
+Platform: Render Web Service
 
-Design Principles
+URL:
+https://ai-data-analyst-pre1.onrender.com
+Backend Health
+https://ai-data-analyst-pre1.onrender.com/health
+Swagger
+https://ai-data-analyst-pre1.onrender.com/docs
+ReDoc
+https://ai-data-analyst-pre1.onrender.com/redoc
+🏛️ Deployment Architecture
+                    ┌─────────────────────┐
+                    │       User          │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+              ┌────────────────────────────┐
+              │     Render Static Site     │
+              │      React Frontend        │
+              └──────────────┬─────────────┘
+                             │
+                             │ HTTPS / REST API
+                             ▼
+              ┌────────────────────────────┐
+              │     Render Web Service     │
+              │       FastAPI Backend      │
+              └──────────────┬─────────────┘
+                             │
+              ┌──────────────┼──────────────┐
+              │              │              │
+              ▼              ▼              ▼
+          ┌────────┐    ┌──────────┐   ┌─────────┐
+          │ DuckDB │    │ AI Agent │   │ Pandas  │
+          └────────┘    └────┬─────┘   └─────────┘
+                             │
+                             ▼
+                       ┌───────────┐
+                       │ Gemini /  │
+                       │    LLM    │
+                       └───────────┘
+🧰 Development Commands
+Backend
 
-The project is designed around the following engineering principles:
+Create environment:
 
+python -m venv .venv
+
+Activate on Windows:
+
+.venv\Scripts\activate
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+Run backend:
+
+uvicorn backend.main:app --reload --host 0.0.0.0 --port 8000
+
+Run tests:
+
+pytest -v
+Frontend
+
+Install dependencies:
+
+cd frontend
+npm install
+
+Development server:
+
+npm run dev
+
+Production build:
+
+npm run build
+
+Preview production build:
+
+npm run preview
+🐳 Docker Commands
+
+Build:
+
+docker compose build
+
+Start:
+
+docker compose up
+
+Start in background:
+
+docker compose up -d
+
+Rebuild:
+
+docker compose up --build
+
+Stop:
+
+docker compose down
+
+Logs:
+
+docker compose logs -f
+🧱 Design Principles
 Modular Architecture
 
 Responsibilities are separated into:
@@ -860,6 +1276,8 @@ Extensibility
 
 The architecture allows additional capabilities to be added without rewriting the entire application.
 
+🔮 Future Extensions
+
 Potential future extensions include:
 
 Multi-file joins
@@ -877,7 +1295,7 @@ Scheduled reports
 Email/Slack notifications
 Production observability
 Kubernetes deployment
-Known Limitations
+⚠️ Known Limitations
 
 The current implementation is primarily designed as an AI data-analysis demonstration and can be extended further for enterprise-scale deployment.
 
@@ -892,7 +1310,7 @@ Rate limiting
 Advanced monitoring
 Automated LLM evaluation
 Multi-user data isolation
-Project Validation
+📋 Project Validation
 
 The application has been validated through backend and frontend checks.
 
@@ -906,10 +1324,14 @@ Dataset API smoke tests
 JSON serialization validation
 Health endpoint validation
 
-Example backend validation:
+Example:
 
-85 passed
-Engineering Highlights
+Backend Tests: 85 passed
+Frontend Build: Successful
+CSV Upload Smoke Test: Successful
+Dataset API Smoke Test: Successful
+Health Endpoint: Successful
+💡 Engineering Highlights
 
 This project demonstrates practical implementation of an AI-powered application rather than simply connecting an LLM API.
 
@@ -931,75 +1353,81 @@ Error handling
 JSON serialization safety
 Automated testing
 Docker containerization
-Deployment readiness
-Future Roadmap
+Render deployment
+🗺️ Future Roadmap
 Phase 1 — Core Analytics
- CSV upload
- Dataset validation
- Dataset profiling
- Natural language analysis
- SQL analysis
- Pandas analysis
- Visualization
- Anomaly detection
+CSV upload
+Dataset validation
+Dataset profiling
+Natural language analysis
+SQL analysis
+Pandas analysis
+Visualization
+Anomaly detection
 Phase 2 — AI Intelligence
- AI agent orchestration
- Tool selection
- Analysis trace
- Conversation context
- Result explanations
+AI agent orchestration
+Tool selection
+Analysis trace
+Conversation context
+Result explanations
 Phase 3 — Production Readiness
- Automated testing
- Error handling
- Docker support
- Export functionality
- Authentication
- Cloud object storage
- Distributed processing
- Advanced observability
+Automated testing
+Error handling
+Docker support
+Export functionality
+Authentication
+Cloud object storage
+Distributed processing
+Advanced observability
 Phase 4 — Advanced Analytics
- Forecasting
- Multi-dataset joins
- Semantic search
- RAG
- Automated dashboards
- Scheduled reports
- Advanced agent evaluation
-Contributing
+Forecasting
+Multi-dataset joins
+Semantic search
+RAG
+Automated dashboards
+Scheduled reports
+Advanced agent evaluation
+🤝 Contributing
 
 Contributions are welcome.
 
-To contribute:
-
+1. Clone the Repository
 git clone https://github.com/arunkumar-201/ai-data-analyst.git
-
 cd ai-data-analyst
-
+2. Create a Feature Branch
 git checkout -b feature/your-feature
-
+3. Make Your Changes
 git add .
-
+4. Commit
 git commit -m "Add your feature"
-
+5. Push
 git push origin feature/your-feature
 
 Then open a Pull Request.
 
-License
+🔗 Important Links
+Resource	Link
+🌐 Live Application	https://ai-data-analyst-1-oj15.onrender.com
+⚙️ Backend API	https://ai-data-analyst-pre1.onrender.com
+❤️ Health Check	https://ai-data-analyst-pre1.onrender.com/health
+📚 Swagger	https://ai-data-analyst-pre1.onrender.com/docs
+📖 ReDoc	https://ai-data-analyst-pre1.onrender.com/redoc
+💻 GitHub	https://github.com/arunkumar-201/ai-data-analyst
+👤 GitHub Profile	https://github.com/arunkumar-201
+📄 License
 
 This project is licensed under the MIT License.
 
 See the LICENSE file for details.
-
-Author
+👨‍💻 Author
 Arun Kumar Danda
 
 AI Data Analyst — Full-Stack AI Data Analysis Platform
 
-GitHub:
+GitHub
 
 https://github.com/arunkumar-201
 
-Repository:
+Repository
 
 https://github.com/arunkumar-201/ai-data-analyst
